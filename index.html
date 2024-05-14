@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:100,400" rel="stylesheet">
+    <link rel="stylesheet" href="css/custom.css">
+
+    <!-- Load font awesome icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <title>INEX</title>
+</head>
+
+<body>
+
+    <header>
+        <div class="container container-header">
+            <div class="logo"> <img src="img/logo-inex_1.png" alt=""></div>
+            <h5 class="title">Seguimiento de ingresos y egresos</h5>
+        </div>
+    </header>
+    <div class="container">
+        <section class="main-content">
+            <div class="row">
+
+                <div class="col-md-6 col-sm-12">
+                    <div class="content printAlertIncome">
+                        <h2 class="text-center bold">Añade tus ingresos aqui</h2>
+
+                        <form id="add-income" action="#">
+                            <div class="form-group">
+                                <label for="income">Ingreso:</label>
+                                <input type="text" class="form-control" id="income" placeholder="Nombre Ingreso">
+                            </div>
+                            <div class="container-view-flex">
+                                <div class="form-group">
+                                    <label for="income-amount">Cantidad:</label>
+                                    <input type="text" class="form-control" id="income-amount"
+                                        placeholder="Cantidad en $">
+                                </div>
+                                <div class="form-group">
+                                    <label for="income-date">Fecha:</label>
+                                    <input type="date" class="form-control" id="income-date">
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-primary full-width">Agregar</button>
+                        </form>
+
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-sm-12">
+                    <div class="content printAlertExpenses">
+                        <h2 class="text-center bold">Añade tus egresos aqui</h2>
+
+                        <form id="add-expenses" action="#">
+                            <div class="form-group">
+                                <label for="expenses">Egreso:</label>
+                                <input type="text" class="form-control" id="expenses" placeholder="Nombre Egreso">
+                            </div>
+                            <div class="container-view-flex">
+                                <div class="form-group">
+                                    <label for="expenses-amount">Cantidad:</label>
+                                    <input type="text" class="form-control" id="expenses-amount"
+                                        placeholder="Cantidad en $">
+                                </div>
+                                <div class="form-group">
+                                    <label for="expenses-date">Fecha:</label>
+                                    <input type="date" class="form-control" id="expenses-date">
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-primary full-width">Agregar</button>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="main-content">
+            <div class="row">
+
+                <div class="col-md-6 col-sm-12">                  
+                    <div id="income" class="budget">
+                        <div class="alert alert-primary">
+                            <h2 class="text-center bold">Ingresos</h2>
+                            <p><span id="income-partial"></span> </p>
+                        </div>
+                        <div class="total-income alert alert-success">
+                            <p>Total ingresos: $ <span id="income-total"></span></p>
+                        </div>
+                        <div class="remaining alert alert-success">
+                            <p>Restante disponible: $ <span id="remaining"></span></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-sm-12">
+                    <div id="expenses" class="budget">
+                        <div class="alert alert-primary">
+                            <h2 class="text-center bold">Egresos</h2>
+                            <p><span id="expenses-partial"></span> </p>
+                        </div>
+                        <div class="total-expenses alert alert-success">
+                            <p>Total egresos: $ <span id="expenses-total"></span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="js/main-inex.js"></script>
+</body>
+
+</html>
